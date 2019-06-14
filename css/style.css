@@ -1311,3 +1311,9 @@ footer .credits a {
 #test{
   display: none;
 }
+.col-center-block {
+  float: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

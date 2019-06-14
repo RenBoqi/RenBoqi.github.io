@@ -1,7 +1,9 @@
 (function ($) {
 	"use strict";
 	var nav = $('nav');
+	var userCookie;
   var navHeight = nav.outerHeight();
+
 
 
   $('.navbar-toggler').on('click', function() {
@@ -10,11 +12,8 @@
     }
   })
 
-
-
   // Preloader
   $(window).on('load', function (){
-
     if ($('#preloader').length) {
       $('#preloader').delay(100).fadeOut('slow', function () {
         $(this).remove();
@@ -22,7 +21,14 @@
     }
   });
 
-
+	$(window).on('beforeunload', function(){
+		return "your data will not be saved";
+	});
+	
+	$(window).on('unload', function(){
+		alert("shuxin");
+		return "您可能有数据没有保存lalala";
+	});
   $('#submitBtn').on('click',function () {
 
 	  var account = document.getElementById("account").value;
@@ -35,31 +41,30 @@
 		  setTimeout(function () {
 			  $("#test").hide();
 			  $("#life").show();
+			  $("#navitem1").hide();
+			  $("#navitem2").show();
+			  $("#navitem3").show();
+			  $("#navitem4").show();
 		  },1500);
+		  $('#hello').text("Hello Tester!");
 
-		  $('#navbar2').text("Tester");
-		  $('#navbar2').attr("href","#test");
-		  $("#navbar").append('<li id="logout" class="nav-item"> <a class="nav-link js-scroll active" href="#">Logout</a> </li>');
 	  }
 	  return false;
   });
 
-  $("#navbar").on("click",function () {
-	  var navbar =document.getElementById("navbar");
-	  var list=document.getElementsByTagName("li");
-	  for(var i=0; i<list.length;i++){
-	  	if (i==2){
-	  		navbar.removeChild(navbar.lastChild);
-			$('#title').text("Login for get more infos");
-			$("input").show();
-			$('#navbar2').text("Login");
-			$('#navbar2').attr("href","#login");
-			$("#life").hide();
-			$("#login").show();
-		}
-	  }
+  $("#navitem4").on("click",function () {
+	  $('#hello').text("Hello World!");
+	  $('#title').text("Login for get more infos");
+	  //$("input").show();
+	  $("#life").hide();
+	  $("#navitem1").show();
+	  $("#navitem2").hide();
+	  $("#navitem3").hide();
+	  $("#navitem4").hide();
+	  $("#login").show();
 	  return false;
   });
+
   // Back to top button
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
