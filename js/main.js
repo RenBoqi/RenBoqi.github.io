@@ -24,7 +24,7 @@
 	$(window).on('beforeunload', function(){
 		return "your data will not be saved";
 	});
-	
+
 	$(window).on('unload', function(){
 		alert("shuxin");
 		return "您可能有数据没有保存lalala";
@@ -41,10 +41,18 @@
 		  setTimeout(function () {
 			  $("#test").hide();
 			  $("#life").show();
+			  $("#geduan1").show();
+			  $("#videos").show();
+			  $("#geduan2").show();
+			  $("#work").show();
+			  $("#video5").show();
+			  $("#geduan3").show();
 			  $("#navitem1").hide();
 			  $("#navitem2").show();
 			  $("#navitem3").show();
 			  $("#navitem4").show();
+			  $("#life_background").show();
+
 		  },1500);
 		  $('#hello').text("Hello Tester!");
 
@@ -57,6 +65,12 @@
 	  $('#title').text("Login for get more infos");
 	  //$("input").show();
 	  $("#life").hide();
+	  $("#geduan1").hide();
+	  $("#videos").hide();
+	  $("#geduan2").hide();
+	  $("#work").hide();
+	  $("#video5").hide();
+	  $("#geduan3").hide();
 	  $("#navitem1").show();
 	  $("#navitem2").hide();
 	  $("#navitem3").hide();
@@ -161,24 +175,5 @@
 			}
 		}
 	});
-
-	/**function onclickfunction(){
-		var account = document.getElementById("account").value;
-		var password = document.getElementById("password").value;
-		var loginSection = document.getElementById("login");
-		var testSection = document.getElementById("test");
-		var title=document.getElementById("title");
-		if(account == "test" && password =="test"){
-
-			if(testSection.style.display == "none"){
-				title.innerHTML="ok";
-				loginSection.style.display="none";
-				testSection.style.display="block";
-			}
-		}else{
-			alert("wrong account or password");
-		}
-
-	}*/
 
 })(jQuery);
