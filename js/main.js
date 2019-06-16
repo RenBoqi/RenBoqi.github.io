@@ -45,7 +45,6 @@
 			  $("#videos").show();
 			  $("#geduan2").show();
 			  $("#work").show();
-			  $("#video5").show();
 			  $("#geduan3").show();
 			  $("#navitem1").hide();
 			  $("#navitem2").show();
@@ -69,7 +68,6 @@
 	  $("#videos").hide();
 	  $("#geduan2").hide();
 	  $("#work").hide();
-	  $("#video5").hide();
 	  $("#geduan3").hide();
 	  $("#navitem1").show();
 	  $("#navitem2").hide();
